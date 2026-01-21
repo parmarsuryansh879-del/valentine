@@ -181,6 +181,23 @@
       50% { opacity: 1; }
       100% { transform: translateY(-100px) scale(1); opacity: 0; }
     }
+   /* ===== FIXED PHOTO GALLERY (SAFE PATCH) ===== */
+.photo-box {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-orientation: from-image;
+  display: block;
+}
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -250,13 +267,9 @@
 
       <!-- PHOTO 1 -->
       <div class="rounded-2xl shadow-xl overflow-hidden fade-in" style="animation-delay: 0.1s;">
-        <img
-          src="./images/IMG-20250914-WA0072.jpg"
-         referrerpolicy="no-referrer"
-
-          alt="Photo 1"
-          class="w-full aspect-[4/3] object-cover"
-        />
+        <div class="photo-box">
+          <img src="./images/IMG-20250914-WA0072.jpg" alt="Photo 1">
+        </div>
         <div class="p-6" id="photo1-caption-container">
           <p class="font-elegant text-xl text-center" id="photo1-caption">
             Our first date - the moment I knew you were special
@@ -266,13 +279,9 @@
 
       <!-- PHOTO 2 -->
       <div class="rounded-2xl shadow-xl overflow-hidden fade-in" style="animation-delay: 0.2s;">
-        <img
-          src="./images/IMG-20251103-WA0066.jpg"
-         referrerpolicy="no-referrer"
-
-           alt="Photo 2"
-          class="w-full aspect-[4/3] object-cover"
-        />
+        <div class="photo-box">
+          <img src="./images/IMG-20251103-WA0066.jpg" alt="Photo 2">
+        </div>
         <div class="p-6" id="photo2-caption-container">
           <p class="font-elegant text-xl text-center" id="photo2-caption">
             The day I realized I was falling in love
@@ -282,13 +291,9 @@
 
       <!-- PHOTO 3 -->
       <div class="rounded-2xl shadow-xl overflow-hidden fade-in" style="animation-delay: 0.3s;">
-        <img
-          src="./images/IMG-20251227-WA0031.jpg"
-         referrerpolicy="no-referrer"
-
-          alt="Photo 3"
-          class="w-full aspect-[4/3] object-cover"
-        />
+        <div class="photo-box">
+          <img src="./images/IMG-20251227-WA0031.jpg" alt="Photo 3">
+        </div>
         <div class="p-6" id="photo3-caption-container">
           <p class="font-elegant text-xl text-center" id="photo3-caption">
             My favorite moment - your smile that day was everything
@@ -298,13 +303,9 @@
 
       <!-- PHOTO 4 -->
       <div class="rounded-2xl shadow-xl overflow-hidden fade-in" style="animation-delay: 0.4s;">
-        <img
-          src="./images/IMG_20251031_085631_262.jpg"
-         referrerpolicy="no-referrer"
-
-          alt="Photo 4"
-          class="w-full aspect-[4/3] object-cover"
-        />
+        <div class="photo-box">
+          <img src="./images/IMG_20251031_085631_262.jpg" alt="Photo 4">
+        </div>
         <div class="p-6" id="photo4-caption-container">
           <p class="font-elegant text-xl text-center" id="photo4-caption">
             Together forever - this is just the beginning
@@ -319,8 +320,10 @@
         One More Thing... 💍
       </button>
     </div>
-     </div>
-    </div>
+
+  </div>
+</div>
+
    </div><!-- Page 5: Proposal -->
    <div id="page5" class="page min-h-full w-full flex flex-col items-center justify-center p-6">
     <div class="max-w-2xl w-full text-center">
@@ -773,4 +776,5 @@
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c0e6e5cf2653f7f',t:'MTc2ODkxMDYzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
+
 
